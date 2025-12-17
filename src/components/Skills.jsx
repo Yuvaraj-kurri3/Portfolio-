@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaDatabase, FaPython,FaGithub } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaDatabase, FaPython,FaGithub ,FaJava} from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss, SiTypescript, SiRedis } from 'react-icons/si';
 
 const skills = [
@@ -15,7 +15,7 @@ const skills = [
     { name: 'CSS3', icon: <FaCss3Alt color="#1572B6" /> },
     { name: 'Tailwind', icon: <SiTailwindcss color="#06B6D4" /> },
     { name: 'Git', icon: <FaGitAlt color="#F05032" /> },
-    { name: 'Python', icon: <FaPython color="#3776AB" /> },
+    { name: 'Java', icon: <FaJava color="#a93d16ff" /> },
 ];
 
 const Skills = () => {

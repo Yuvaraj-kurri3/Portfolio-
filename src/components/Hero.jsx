@@ -44,6 +44,7 @@ const Hero = () => {
                     <div style={{ height: '60px', marginBottom: '40px', position: 'relative', overflow: 'hidden' }}>
                         <AnimatePresence mode='wait'>
                             <motion.h2
+                                className="role-text"
                                 key={roles[index]}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -130,6 +131,10 @@ const Hero = () => {
           .hero-image div {
             width: 280px !important;
             height: 280px !important;
+          }
+          .role-text {
+            width: 100%;
+            text-align: center;
           }
         }
       `}</style>
