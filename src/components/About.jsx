@@ -18,7 +18,7 @@ const About = () => {
                         backed by powerful architecture.
                     </p>
                     <p>
-                        I love solving complex problems and learning new technologies. Whether it's building a responsive
+                        I love Solving complex problems and learning new technologies. Whether it's building a responsive
                         frontend with React or designing a RESTful API with Node.js, I am always eager to take on new challenges.
                     </p>
                 </div>
