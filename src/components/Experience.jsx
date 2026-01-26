@@ -70,7 +70,7 @@ const Experience = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <p><FaGithub /> - <a href={exp.GitHub} target='_blank' style={{ color: '#38bdf8', textDecoration: 'underline' }}>Repository</a></p>
+                            <p><FaGithub /> - <a href={exp.GitHub} target='_blank' style={{ color: '#38bdf8', textDecoration: 'none' }}>Repository</a></p>
                         </motion.div>
                     ))}
                 </div>
