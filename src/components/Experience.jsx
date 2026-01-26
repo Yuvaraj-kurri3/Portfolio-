@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaGithub } from 'react-icons/fa';
 
 const experiences = [
     {
@@ -70,7 +70,7 @@ const Experience = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <p>GitHub Repositry: <a href={exp.GitHub} target='_blank' style={{ color: '#38bdf8', textDecoration: 'underline' }}>Repository</a></p>
+                            <p><FaGithub /> - <a href={exp.GitHub} target='_blank' style={{ color: '#38bdf8', textDecoration: 'underline' }}>Repository</a></p>
                         </motion.div>
                     ))}
                 </div>

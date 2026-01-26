@@ -25,6 +25,7 @@ const Navbar = () => {
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
+     { name: 'Experiance', to: 'experience' },
   ];
 
   return (
@@ -57,9 +58,9 @@ const Navbar = () => {
               <Link
                 to={link.to}
                 smooth={true}
-                duration={500}
+                duration={100}
                 offset={-70}
-                style={{ cursor: 'pointer', color: '#94a3b8', transition: 'color 0.3s' }}
+                style={{ cursor: 'pointer', color: '#94a3b8', transition: 'color 0.9s' }}
                 activeClass="active-link"
                 spy={true}
                 onMouseEnter={(e) => e.target.style.color = '#38bdf8'}
