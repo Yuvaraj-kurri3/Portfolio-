@@ -4,16 +4,16 @@ import { FaBriefcase, FaCalendarAlt, FaGithub } from 'react-icons/fa';
 
 const experiences = [
     {
-        role: 'FullStack Developer',
-        company: 'Zidio Development',
-        period: 'June 2025 - Sep 2025',
+        role: 'MERN Stack Developer',
+        company: 'Smart Bridge',
+        period: 'May 2026 - June 2026',
         type: 'Remote',
         description: [
-            'Full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).',
-            'Built and tested web applications with RESTful APIs and dynamic front-end components.',
-            'Collaborated with cross-functional team members using Git for version control and code management.'
+            'Designed and developed a full-stack House Rental web application using MERN Stack, enabling renters, landlords, and agents to discover and list properties on a unified platform.',
+            'Developed 25+ RESTful APIs using Express.js following MVC architecture.',
+            'Implemented JWT authentication, bcrypt password hashing, and role-based access control using custom middleware.'
         ],
-        GitHub: 'https://github.com/Yuvaraj-kurri3/Excel-Analytics-Platform'
+        GitHub: 'https://github.com/Yuvaraj-kurri3/HouseRental'
     },
     {
         role: 'FullStack Developer',
@@ -70,7 +70,9 @@ const Experience = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <p><FaGithub /> - <a href={exp.GitHub} target='_blank' style={{ color: '#38bdf8', textDecoration: 'none' }}>Repository</a></p>
+                            {exp.GitHub && (
+                                <p><FaGithub /> - <a href={exp.GitHub} target='_blank' rel='noreferrer' style={{ color: '#38bdf8', textDecoration: 'none' }}>Repository</a></p>
+                            )}
                         </motion.div>
                     ))}
                 </div>
