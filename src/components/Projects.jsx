@@ -1,19 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+// import houseRentalImage from '../assets/HouseRental.jpg';
 
 const projects = [
     {
-        title: 'UndoBharat',
-        description: 'Empowering citizens to report and resolve local village problems.',
-        tech: ['EJS', 'Node.js', 'MongoDB', 'Express'],
-        github: 'https://github.com/Yuvaraj-kurri3/UndoBharat',
-        demo: 'https://undobharat.org',
-        image: 'https://res.cloudinary.com/dqz2hem3m/image/upload/v1750665330/logo_ep4az4.png'
+        title: 'Hostel Management System',
+        description: 'A Full-Stack Hostel Management System built with React, Node.js, MongoDB, and Express. It allows users to manage hostel operations efficiently, including room allocation, fee management, and student records.',
+        tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+        github: 'https://github.com/Yuvaraj-kurri3/srinidhihostels',
+        demo: 'https://srinidhihostels.netlify.app/',
+        image: 'https://res.cloudinary.com/dtozixle0/image/upload/v1767552750/Gemini_Generated_Image_remrasremrasremr_bjdwyy.png'
     },
     {
         title: 'Text-Summarizer',
-        description: 'AI Based Text Summarizer',
+        description: 'Built a MERN-based text summarizer with Redis caching and Hugging Face API integration.',
         tech: ['React', 'Node.js', 'MongoDB', 'Express','Redis'],
         github: 'https://github.com/Yuvaraj-kurri3/Text_Summerizer',
         demo: 'https://text-summerizer-iota.vercel.app/',
@@ -21,12 +23,12 @@ const projects = [
         height: '170%',
     },
     {
-        title: 'Learnify',
-        description: 'Only Diploma students under the C21 scheme can access all subjects',
-        tech: ['Html', 'CSS', 'JavaScript'],
-        github: 'https://github.com/Yuvaraj-kurri3/Learnify',
-        demo: 'https://yuvaraj-kurri3.github.io/Learnify/',
-        image: 'https://yuvaraj-kurri3.github.io/Learnify/images/logo9.png'
+        title: 'HouseRentals',
+        description: 'Built HouseHunt, a MERN-based rental platform with property search and filtering, Cloudinary image uploads, admin moderation, JWT/bcrypt authentication, role-based access control, 25+ REST APIs, compound-indexed MongoDB queries, and MongoDB Atlas.',
+        tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'JWT'],
+        image:'https://res.cloudinary.com/dtozixle0/image/upload/v1795584137/Modern_House_Rental_Logo_scimnp.png',
+        github: 'https://github.com/Yuvaraj-kurri3/HouseRental'
+
     }
 ];
 
@@ -55,9 +57,11 @@ const Projects = () => {
                                 flexDirection: 'column'
                             }}
                         >
-                            <div style={{ height: '200px', overflow: 'hidden' }}>
-                                <img src={project.image} alt={project.title} style={{ width: '100%', height: project.height || '100%', objectFit: 'cover', transition: 'transform 0.5s' }} />
-                            </div>
+                            {project.image && (
+                                <div style={{ height: '200px', overflow: 'hidden' }}>
+                                    <img src={project.image} alt={project.title} style={{ width: '100%', height: project.height || '100%', objectFit: 'cover', transition: 'transform 0.5s' }} />
+                                </div>
+                            )}
                             <div style={{ padding: '25px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                                 <h3 style={{ fontSize: '1.5rem', marginBottom: '10px', color: '#f8fafc' }}>{project.title}</h3>
                                 <p style={{ color: '#94a3b8', marginBottom: '20px', flex: 1 }}>{project.description}</p>
@@ -67,12 +71,16 @@ const Projects = () => {
                                     ))}
                                 </div>
                                 <div style={{ display: 'flex', gap: '20px' }}>
-                                    <a href={project.github} style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#cbd5e1', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#38bdf8'} onMouseLeave={(e) => e.target.style.color = '#cbd5e1'} target="_blank">
-                                        <FaGithub /> Code
-                                    </a>
-                                    <a href={project.demo} style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#cbd5e1', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#38bdf8'} onMouseLeave={(e) => e.target.style.color = '#cbd5e1'} target="_blank">
-                                        <FaExternalLinkAlt /> Live Demo
-                                    </a>
+                                    {project.github && (
+                                        <a href={project.github} rel='noreferrer' style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#cbd5e1', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#38bdf8'} onMouseLeave={(e) => e.target.style.color = '#cbd5e1'} target="_blank">
+                                            <FaGithub /> Code
+                                        </a>
+                                    )}
+                                    {project.demo && (
+                                        <a href={project.demo} rel='noreferrer' style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#cbd5e1', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#38bdf8'} onMouseLeave={(e) => e.target.style.color = '#cbd5e1'} target="_blank">
+                                            <FaExternalLinkAlt /> Live Demo
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

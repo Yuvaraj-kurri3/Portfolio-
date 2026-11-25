@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import resume from '../assets/YuvarajKurri_Resume.pdf';
 
 const Hero = () => {
-    const roles = ['Fullstack Developer', 'Content Creator', 'Student', 'Founder of UndoBharat'];
+    const roles = ['Fullstack Developer', 'Content Creator', 'Student'];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
